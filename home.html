@@ -1,0 +1,200 @@
+<html>
+<head>
+<style>
+body
+{
+
+background-image: url("a.jpg");
+}
+.img1
+{
+padding: 50px;	
+}
+.img2
+{
+padding: 150px;	
+}
+.img3
+{
+padding: 250px;	
+}
+#a1:hover
+{
+	background-color: purple;
+	border: 2px solid blue;
+}
+.button1
+{
+border: none;
+background: #00FF7F;
+color: black !important;
+left: 50px;
+font-weight: 100;
+padding: 20px;
+font-size: 20;
+text-transform: uppercase;
+border-radius: 6px;
+display: inline-block;
+}
+div.img {
+    margin: 100px;
+    float: left;
+    width: 150px;
+    size: 300;
+    padding: 25px;
+}	
+
+.button2
+{
+border: none;
+background: #00FF7F;
+color: black !important;
+left: 150px;
+font-weight: 100;
+padding: 20px;
+font-size: 20;
+text-transform: uppercase;
+border-radius: 6px;
+display: inline-block;
+}
+.button3
+{
+border: none;
+background: #00FF7F;
+color: black !important;
+left: 50px;
+font-weight: 100;
+font-size: 20;
+padding: 20px;
+text-transform: uppercase;
+border-radius: 6px;
+display: inline-block;
+}
+.button4
+{
+border: none;
+background: #00FF7F;
+color: black !important;
+left: 50px;
+font-weight: 100;
+font-size: 20;
+padding: 20px;
+text-transform: uppercase;
+border-radius: 6px;
+display: inline-block;
+}
+.button5
+{
+border: none;
+background: #00FF7F;
+color: black !important;
+left: 50px;
+font-weight: 150;
+font-size: 20;
+padding: 20px;
+text-transform: uppercase;
+border-radius: 6px;
+display: inline-block;
+}
+.button6
+{
+border: none;
+background: #00FF7F;
+color: black !important;
+left: 50px;
+font-weight: 150;
+font-size: 20;
+padding: 20px;
+text-transform: uppercase;
+border-radius: 6px;
+display: inline-block;
+}
+ul
+{
+list-style-type:none;
+margin:0;
+pidding:0;
+overflow:hidden;
+background-color:#334;
+}
+
+li
+{
+float: left;
+}
+
+li a {
+display: block;
+color:white;
+text-align:center;
+pedding:14px 16px;
+text-decoration:none;
+}
+
+li a:hover:not(.active)
+{
+background-color:turquoise;
+}
+
+.actiive
+{
+background-color:steelblue;
+}
+.header{
+	background-color: black;
+	line-height: 100px;
+	padding: 2px;
+	margin: 2px solid yellow;
+	font-family:Copperplate gothic bold; 
+}
+</style>
+<script type="text/javascript">
+
+		banner=new Array("sairat.jpg","double.jpeg","boyz.jpeg");
+		banner1=new Array("gold.jpeg","mitro.jpeg","dhadak.jpg");
+		banner2=new Array("avengers.jpeg","hobbit.jpeg","CaptainAmerica.jpeg");
+		curban=0;
+		noban=banner.length;
+		noban1=banner1.length;
+		noban2=banner2.length;
+	function dispban()
+	{
+		if(document.images)
+		{
+			curban++;
+			if((curban==noban)&&(curban==noban1)&&(curban==noban2))
+			{
+				curban=0;
+			}
+			document.rotban.src=banner[curban];
+			document.rotban1.src=banner1[curban];
+			document.rotban2.src=banner2[curban];
+			setTimeout("dispban()",1000);
+		}
+	}
+</script>
+
+<title>Home Page-MOVIE TICKET BOOKING</title>
+</head>
+<body onload="dispban()">
+	<div class="header">
+<center style="color:red; font-size:60px;"><b>IT'S SHOWTIME</b></center><hr></div>
+
+<br>
+<center>
+<a href="comingsoon.html"><button class="button1" id="a1" >COMING SOON</button></a>
+<a href="bollywood.html"><button class="button2"id="a1" >BOLLYWOOD</button></a>
+<a href="hollywood.html"><button class="button3" id="a1" >HOLLYWOOD</button></a>
+<a href="marathi.html"><button class="button4" id="a1" >MARATHI</button></a>
+<a href="gallery.html"><button class="button5" id="a1" >GALLERY</button></a>
+<a href="about.html"><button class="button6" id="a1" >ABOUT US</button></a>
+</center></div>
+<center>
+<div class="img"><img src="boyz.jpeg" width="300" height="350" name="rotban" ></div>
+<div class="img"><img src="padman.jpeg" width="300" height="350" name="rotban1" ></div>
+<div class="img"><img src="avengers.jpeg" width="300" height="350" name="rotban2" ></div></center>
+<font size="5" color="purple"><center></center></font>
+<br>
+</center>
+</body>
+</html>
