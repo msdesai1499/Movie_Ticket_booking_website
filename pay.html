@@ -1,0 +1,116 @@
+<html>
+<head>
+	<style>
+	body
+	{
+		background-image: url("5.jpg");
+		color: red;
+	}
+
+</0style>
+	<b><u>Payment details</u></b><br><br>
+<script>
+	var tot;
+
+function check3(ele)
+		{
+	
+	
+			var r=/[\d]/;
+			if(r.test(ele))
+			{
+			
+	var x=parseInt(ele);
+	var cookiecontent;
+	cookiecontent=window.document.cookie;
+	var m=parseInt(cookiecontent);
+	 tot=x*m;
+alert("You have to pay Rs"+tot);	
+										
+			}
+			else
+			{
+				alert("Enter number");
+			
+			}	
+
+		}
+
+	function check1(ele)
+		{
+	
+	
+			var r=/[\d]{3}/;
+			if(r.test(ele))
+			{
+				
+							return true;
+			}
+			else
+			{
+				alert("invalid CVV");
+			
+			}	
+
+		}
+
+		function check(ele)
+		{
+	
+	
+			var r=/[\d]{12}/;
+			if(r.test(ele))
+			{
+				
+							return true;
+			}
+			else
+			{
+				alert("invalids card no");
+			
+			}	
+
+		}
+function abc(ad)
+{
+
+	var x=parseInt(ad);
+	var cookiecontent;
+	cookiecontent=window.document.cookie;
+	var m=parseInt(cookiecontent);
+	 tot=x*m;
+alert("You have to pay Rs"+tot);
+}
+function payment()
+{
+	with(document.forms.form1)
+	{
+	if((seats.value=="")||(no.value=="")||(pwd.value=="")||(pwd1.value==""))
+	{
+		alert("plzz enter values")
+	}
+	else
+	{
+	alert("Payment Successful Rs"+tot+" have been withdrawn from your account")
+}
+}
+}
+</script>
+</head>
+<body>
+	<div class="form">
+<form  name="form1" >
+No of seats:<br>
+ <input type="text" name="seats" required  onchange="check3(this.value)" > <br><br>
+Card No :<br>
+<input type="text" name="no" required onblur="check(this.value)"><br><br>
+CVV:<br>
+<input type="password" name="pwd" maxlength="3" onblur="check1(this.value)"><br><br>
+Date:<br>
+<input type="date" name="pwd1" ><br><br>
+<input type="submit" value="Make Payment" onclick="payment()">
+
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+div#header,div#footer,div#content,div#post {
+    border:1px solid grey;
+    margin:5px;margin-bottom:15px;padding:8px;
+    background-color:white;
+}
+div#header,div#footer {
+    color:#ff8040;background-color:#8000ff;margin-bottom:5px;
+}body {
+    font-family:Verdana,sans-serif;font-size:0.9em;
+}
+div#header,div#footer,div#content,div#post {
+    border:1px solid grey;
+    margin:5px;margin-bottom:15px;padding:8px;
+    background-color:white;
+}
+div#header,div#footer {
+    color:#ffff00;background-color:#400040;margin-bottom:5px;
+}
+div#content {
+    background-color:#ddd;
+}
+div#menu ul  {
+    margin:0;padding:0;
+}
+div#menu ul li {
+    display:inline; margin:5px;
+}
+fieldset#mainField{
+	legend-color:ff0000;
+	color:red;	
+	
+}
+input{
+	color:black;
+	font-family:Adobe heiti std R;
+}
+body{
+	background-image:url("pattern_background_light_line_texture_50877_5000x3532.jpg");
+	background-size:1480px 650px;
+	background-repeat:no-repeat;
+	
+}

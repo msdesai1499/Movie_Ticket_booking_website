@@ -1,0 +1,121 @@
+<html>
+<style>
+	body
+	{
+
+		background-color: pink;
+                          
+	}
+</style>
+<head>
+	<script type="text/javascript">
+
+		function abc(ad)
+		{
+			var r=/[\d]/;
+			if(r.test(ad))
+			{
+				
+				alert("invalid name")
+
+			}
+			if(ad=="")
+			{
+				alert("you should not leave field empty")
+			}
+
+			}
+				function mob(ele)
+		{
+	
+	
+			var r=/^[789]\d{9}$/;
+			if(ele.length!=10)
+			{
+			alert("invalid no");
+			}
+			if(r.test(ele))
+			{
+				
+							return true;
+			}
+			else
+			{
+				alert("invalid no");
+			
+			}	
+
+		}
+			function xyz(ele)
+		{
+	
+	
+			var r=/^\w+([\.-]?\w+)*@\w+([\.-]?\w)*(\.\w{2,3})+$/;
+			if(r.test(ele))
+			{
+				
+							return true;
+			}
+			else
+			{
+				alert("invalid email");
+			
+			}	
+
+		}
+			 function generateCaptcha()
+         {
+             var alpha = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','!','@','#','$','%','^','&','*','+','1','2','3','4','5','6','7','8','9','0');
+             var i;
+             for (i=0;i<4;i++){
+               var a = alpha[Math.floor(Math.random() * alpha.length)];
+               var b = alpha[Math.floor(Math.random() * alpha.length)];
+               var c = alpha[Math.floor(Math.random() * alpha.length)];
+               var d = alpha[Math.floor(Math.random() * alpha.length)];
+               var e = alpha[Math.floor(Math.random() * alpha.length)];
+               var f = alpha[Math.floor(Math.random() * alpha.length)];
+              }
+            var code = a + '' + b + '' + '' + c + '' + d + '' + e + '' + f;
+            document.getElementById("mainCaptcha").value = code
+          }
+	</script>
+
+
+</head>
+<body>
+<marquee style="color:black; font-size:60px;">IT'S SHOWTIME</marquee><hr>
+<center>
+<br>
+
+<button style="background-color:light blue;height:40px; width:120px;float: left; "><a href="hotel.html">Home</a></button>
+<button style="background-color:light blue;height:40px; width:120px;float: left;"><a href="about.html">About us</a></button>
+
+
+<hr>
+<h1>BOOKING DETAILS</h1><br>
+</center>
+
+<form name="mno" action="pay.html">
+<label>First Name:</label> <input type="text" name="fname" placeholder="first Name" required onblur="abc(this.value)" ><br>
+<br>
+<label>Last Name:</label> <input type="text" name="lname" placeholder="last Name"  required onblur="abc(this.value)"><br>
+<br>
+<label>Email: </label> <input type="email" name="email" placeholder="E-mail " required onblur="xyz(this.value)"> <br>
+<br>
+<label>Mob.no: </label> <input type="text" name="phone" placeholder="mob.no "onblur="mob(this.value)" required maxlength="10"> <br>
+
+
+
+<br>
+
+<input type="submit" value="submit">
+</form>
+</center>
+<hr>
+<center>
+<B> All details forwarded to your email</B> 
+</center>
+
+
+</body>
+</html>

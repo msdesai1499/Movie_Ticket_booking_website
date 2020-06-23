@@ -1,0 +1,153 @@
+<html>
+<head>
+<style>
+
+
+#myInput {
+  background-image:
+  url('/img/search.png');
+
+  background-position: 5px 10px;
+  background-size:40px;
+  background-repeat: no-repeat;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+
+#myTable tr.header, #myTable tr:hover{
+  background-color: #f1f1f1;
+}
+
+</style>
+</head>
+
+<body bg color="light blue">
+<center>
+<br>
+
+<a href="hotel.html"><button style="background-color:light blue;height:40px; width:120px;">Home</button></a>
+<a href="Menu.html"class="active"><button style="background-color:steelblue;height:40px; width:120px;">Menu</button></a>
+<a href="photo.html" ><button style="background-color:light blue;height:40px; width:120px;">Photos</button></a>
+<a href="about.html"><button style="background-color:light blue;height:40px; width:120px;">About us</button></a>
+<a href="message.html"><button style="background-color:light blue;height:40px; width:120px;">Messages</button></a>
+<a href="reg.html"><button style="background-color:light blue;height:40px; width:120px;">Regisration</button></a>
+
+</center>
+<h2>MENU CARD</h2>
+
+<input type="text" id="myInput"
+onkeyup="myFunction()" placeholder=
+"Search by Customers...."
+
+title="Type in a name">
+
+<table id="myTable">
+<tr class="header">
+<th style="width:60%;">NAME</th>
+<th style="width:40%;">PRICE</th>
+</tr>
+
+  <tr>
+    <td>TEA</td>
+    <td>20</td>
+  </tr>
+
+  <tr>
+    <td>COFFEE</td>
+    <td>25</td>
+  </tr>
+
+  <tr>
+    <td>Veg Sandwich</td>
+    <td>50</td>
+  </tr>
+
+  <tr>
+    <td>Veg Soup</td>
+    <td>90</td>
+  </tr>
+
+  <tr>
+    <td>Cold Drinks</td>
+    <td>40</td>
+  </tr>
+
+  <tr>
+    <td>Paneer Manchurian</td>
+    <td>200</td>
+  </tr>
+
+  <tr>
+    <td>Veg Noodles</td>
+    <td>120</td>
+  </tr>
+
+  <tr>
+    <td>Rice Plate</td>
+    <td>150</td>
+  </tr>
+
+  <tr>
+    <td>Panjabi Thali</td>
+    <td>100</td>
+  </tr>
+
+</table>
+
+<script>
+
+function myFunction() {
+var input, filter, table, tr, td, i;
+input=document.getElementById("myInput");
+
+filter=input.value.toUpperCase();
+
+table=document.getElementById("myTable");
+
+tr=table.getElementsByTagName("tr");
+
+for (i = 0; i < tr.length; i++) {
+td = tr[i].getElementsByTagName("td")[0];
+
+ if (td) {
+   if (td.innerHTML.toUpperCase()
+   .indexOf(filter) > -1) {
+
+     tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+
+      }
+    }
+  }
+}
+
+</script>
+
+</body>
+</html>
+

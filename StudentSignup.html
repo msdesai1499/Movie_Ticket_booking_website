@@ -1,0 +1,36 @@
+
+<html>
+<head>
+<script>
+</script>
+<title>
+Peek Weema Form
+</title>
+<link href="imageStyle.css">
+<link href="styleStudentForm.css" rel="stylesheet">
+<script type="text/javascript" src="generateCaptch.js">
+</script>
+</head>
+<body onload="generateCaptcha()">
+	<center><h1 ><b><u><a href="StudentSignUpPage.html" style="color:solid violet">Student Login Form</a></u></b></h1></center>
+	<fieldset id="mainField">
+		<legend>
+			<h3>Student SignUp Form</h3>
+		</legend>
+		<form name="StudentLoginForm" id="StudentLogin1" onsubmit="return checkFormFilling()" action="StudentDetails.html">
+			<h3>Enter Username</h3><input placeholder="Enter Username"type="text" id="StudentUName1" value="" name="StudentUserName" onmouseover="nullInput(this.value)"></input>
+			<h3>Create Password</h3><input type="password" placeholder="Enter Password" name="firstEnteredPass" id="pass1" onblur="checkLength(this.value)"></input>
+			<h3>Confirm Password</h3><input type="password" name="confirmedPass" placeholder="Confirm Password"id="pass2" onblur="confirmPassword()"></input>
+			<h3>Captcha Code:</h3><input type="text" id="mainCaptcha"readonly="readonly" style="background-color:black color:white"> 
+            <input type="button" id="refresh" value="Refresh" onclick="generateCaptcha();" /><br>
+            <h3>Reneter Captcha:</h3><input type="text" id="txtInput"/>   
+			<input type="submit" id="submit2" "/>
+		</form>
+	</fieldset>
+	
+		<div id="footer">
+			<p><center>&copy; AY Production Group 2018. All rights reserved.</center></p>
+		</div>
+	
+</body>
+</html>
